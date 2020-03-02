@@ -5,7 +5,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity s2p_adaptor is 
+entity s2p is 
 port(					
 --	Core Side - two parallel interfaces for input and output
 	ADCDAT:		out 	std_logic_vector(15 downto 0);
@@ -26,56 +26,59 @@ port(
 );
 end entity;
 
-architecture rtl of s2p_adaptor is
+architecture rtl of s2p is
 --	Internal Signals
-...
-
+signal ADCDAT_reg : std_logic_vector(15 downto 0);
+signal old_BCLK : std_logic;
+signal bit_ADC : integer;
 begin
 
 	process (CLOCK_50)
-	variable bit_ADC: integer;
 	begin
 		if (rising_edge(CLOCK_50)) then
 		-------------begin sync design----------------
 		
 		-- reset actions (synchronous)
 			if (RST_N = '0') then
-				...
+				ADCstb <='0';
+				ADCDAT_reg <= x'0000';
+				bit_ADC <= 15;
 			else
 				old_BCLK <= AUD_BCLK; -- needed for change detection on BCLK input
 		-- input channel
 				if (old_BCLK='0' and AUD_BCLK='1') then --rising edge of AUD_BCLK
 			  
-					if (...) then -- condition for the start of the protocol
-						...; -- load the bit counter
-						...; -- read the first bit og the packet
-					elsif (...) then -- condition for the data bits of the left channel
-						...; 	-- input one bit
-						...;	-- advance the bit counter
-						if (...) then	-- condition for the strobe of ADC parallel interface
-							...;
-						end if;
+					if (AUD_ADCLRCK = '1') then -- condition for the start of the protocol
+						bit_ADC <= 15; -- load the bit counter
+						ADCDAT_reg(15) <= AUD_ADCDAT ; -- read the first bit of the packet
+						ADCstb <= '0';
+					elsif (bit_ADC>0)and () then -- condition for the data bits of the left channel
+						ADCDAT_reg(bit_ADC) <= AUD_ADCDAT ; 	-- input one bit
+						bit_ADC <= bit_ADC - 1;	-- advance the bit counter
+--						if (bit_ADC=0) then	-- condition for the strobe of ADC parallel interface
+--							ADCstb <= '1';
+--						end if;
 					end if;
 					
 				end if;
 				
-				if (...) then	-- condition to drop the ADC strobe
-					...;
-				end if;
+--				if ( = '1') then	-- condition to drop the ADC strobe
+--					ADCstb ='0';
+--				end if;
 		
-		-- output channel
-				if (...) then -- start condition
-					...;
-					...;
-				elsif (...) then -- each following falling edge
-					...; -- produce DAC serial data bit
-					...;
-				end if;
-				
-				if (...) then -- condition for loading DAC parallel register
-					...;
-				end if;
-		
+--		-- output channel
+--				if (...) then -- start condition
+--					...;
+--					...;
+--				elsif (...) then -- each following falling edge
+--					...; -- produce DAC serial data bit
+--					...;
+--				end if;
+--				
+--				if (...) then -- condition for loading DAC parallel register
+--					...;
+--				end if;
+--		
 		
 			end if;
 			
