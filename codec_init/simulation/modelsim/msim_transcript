@@ -1,0 +1,53 @@
+# Reading D:/ProgramFile/Quartus/modelsim_ase/tcl/vsim/pref.tcl
+# do codec_init_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/ProgramFile/Quartus/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {D:/EEE8088/codec_init/codec_init.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:35:13 on Apr 29,2020
+# vcom -reportprogress 300 -93 -work work D:/EEE8088/codec_init/codec_init.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity codec_init
+# -- Compiling architecture rtl of codec_init
+# End time: 17:35:14 on Apr 29,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vcom -93 -work work {D:/EEE8088/codec_init/simulation/modelsim/codec_init.vht}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:35:14 on Apr 29,2020
+# vcom -reportprogress 300 -93 -work work D:/EEE8088/codec_init/simulation/modelsim/codec_init.vht 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity codec_init_vhd_tst
+# -- Compiling architecture codec_init_arch of codec_init_vhd_tst
+# End time: 17:35:14 on Apr 29,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  codec_init_vhd_tst
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" codec_init_vhd_tst 
+# Start time: 17:35:14 on Apr 29,2020
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.codec_init_vhd_tst(codec_init_arch)
+# Loading work.codec_init(rtl)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run -all
+# End time: 17:59:00 on Apr 29,2020, Elapsed time: 0:23:46
+# Errors: 0, Warnings: 0

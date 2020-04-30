@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/EEE8088/codec_init/simulation/modelsim
+Ecodec_init
+Z1 w1588177668
+Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z4 8D:/EEE8088/codec_init/codec_init.vhd
+Z5 FD:/EEE8088/codec_init/codec_init.vhd
+l0
+L4
+VAQT;aAbd4ao1l@T0DB<DD2
+!s100 A1G?PdYze[BCI1WghYED21
+Z6 OV;C;10.5b;63
+31
+Z7 !s110 1588178113
+!i10b 1
+Z8 !s108 1588178113.000000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/EEE8088/codec_init/codec_init.vhd|
+Z10 !s107 D:/EEE8088/codec_init/codec_init.vhd|
+!i113 1
+Z11 o-93 -work work
+Z12 tExplicit 1 CvgOpt 0
+Artl
+R2
+R3
+DEx4 work 10 codec_init 0 22 AQT;aAbd4ao1l@T0DB<DD2
+l73
+L18
+V?UQ9SPBIjN^o`PO0L95N>0
+!s100 na<[SaTh6:QNMGk>kj2:Z2
+R6
+31
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Ecodec_init_vhd_tst
+Z13 w1588178104
+R2
+R3
+R0
+Z14 8D:/EEE8088/codec_init/simulation/modelsim/codec_init.vht
+Z15 FD:/EEE8088/codec_init/simulation/modelsim/codec_init.vht
+l0
+L4
+Vom[fY8:PWC`WijZQdibeR2
+!s100 S3?MUdJ@O[FCV0V<M3E]d2
+R6
+31
+Z16 !s110 1588178114
+!i10b 1
+Z17 !s108 1588178114.000000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/EEE8088/codec_init/simulation/modelsim/codec_init.vht|
+Z19 !s107 D:/EEE8088/codec_init/simulation/modelsim/codec_init.vht|
+!i113 1
+R11
+R12
+Acodec_init_arch
+R2
+R3
+DEx4 work 18 codec_init_vhd_tst 0 22 om[fY8:PWC`WijZQdibeR2
+l27
+L6
+V^:S44XgJ42z8Q7_gFRZ8D0
+!s100 lL:25_DaAQ70Ejk5`chAD2
+R6
+31
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12

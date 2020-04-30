@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SCLK",
+					"strict" : false
+				},
+				{
+					"name" : "SDIN",
+					"strict" : false
+				},
+				{
+					"name" : "bcnt1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bcnt1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bcnt1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bcnt1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bcnt1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "wcnt1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wcnt1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wcnt1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "wcnt1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fdiv1[0]",
+					"strict" : false
+				},
+				{
+					"name" : "fdiv1[1]",
+					"strict" : false
+				},
+				{
+					"name" : "fdiv1[2]",
+					"strict" : false
+				},
+				{
+					"name" : "fdiv1[3]",
+					"strict" : false
+				},
+				{
+					"name" : "fdiv1[4]",
+					"strict" : false
+				},
+				{
+					"name" : "fdiv1[5]",
+					"strict" : false
+				},
+				{
+					"name" : "fdiv1[6]",
+					"strict" : false
+				},
+				{
+					"name" : "fdiv1[7]",
+					"strict" : false
+				},
+				{
+					"name" : "fdiv1[8]",
+					"strict" : false
+				},
+				{
+					"name" : "RES_N",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
