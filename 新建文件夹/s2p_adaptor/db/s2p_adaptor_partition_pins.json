@@ -1,0 +1,169 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "ADCDAT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[13]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCDAT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "ADCstb",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACDAT",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCDAT",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_ADCLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "RST_N",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_BCLK",
+					"strict" : false
+				},
+				{
+					"name" : "CLOCK_50",
+					"strict" : false
+				},
+				{
+					"name" : "AUD_DACLRCK",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[15]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[0]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[2]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[4]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[6]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[8]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[10]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[12]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[14]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[1]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[3]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[5]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[7]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[9]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[11]",
+					"strict" : false
+				},
+				{
+					"name" : "DACDAT[13]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

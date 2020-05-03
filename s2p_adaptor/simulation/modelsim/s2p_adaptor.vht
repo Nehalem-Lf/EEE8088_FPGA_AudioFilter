@@ -1,29 +1,3 @@
--- Copyright (C) 2018  Intel Corporation. All rights reserved.
--- Your use of Intel Corporation's design tools, logic functions 
--- and other software and tools, and its AMPP partner logic 
--- functions, and any output files from any of the foregoing 
--- (including device programming or simulation files), and any 
--- associated documentation or information are expressly subject 
--- to the terms and conditions of the Intel Program License 
--- Subscription Agreement, the Intel Quartus Prime License Agreement,
--- the Intel FPGA IP License Agreement, or other applicable license
--- agreement, including, without limitation, that your use is for
--- the sole purpose of programming logic devices manufactured by
--- Intel and sold by Intel or its authorized distributors.  Please
--- refer to the applicable agreement for further details.
-
--- ***************************************************************************
--- This file contains a Vhdl test bench template that is freely editable to   
--- suit user's needs .Comments are provided in each section to help the user  
--- fill out necessary details.                                                
--- ***************************************************************************
--- Generated on "04/30/2020 13:43:18"
-                                                            
--- Vhdl Test Bench template for design  :  s2p_adaptor
--- 
--- Simulation tool : ModelSim-Altera (VHDL)
--- 
-
 LIBRARY ieee;                                               
 USE ieee.std_logic_1164.all;                                
 
@@ -92,15 +66,52 @@ BEGIN
      wait for 10 ns;
      end loop;     -- code that executes only once                      
 WAIT;                                                       
-END PROCESS clock;         -- code that executes only once
+END PROCESS clock;         -- code that executes only once   
 
-                                           
-always : PROCESS                                              
--- optional sensitivity list                                  
--- (        )                                                 
--- variable declarations                                      
-BEGIN                                                         
-        -- code executes for every event on sensitivity list  
-WAIT;                                                        
-END PROCESS always;                                          
+rst :process
+begin
+	RST_N <= '1';
+	ADCrdy <= '1';
+wait;
+end process rst;
+
+BCLK :process
+variable i1 :integer;
+begin
+	for i1 in 1 to 2000 loop
+	AUD_BCLK <='1';
+	wait for 11.34 us;
+	AUD_BCLK <='0';
+	wait for 11.34 us;
+	end loop;
+wait;
+end process BCLK;
+
+ADCLRCK :process
+variable i2 :integer;
+begin
+	AUD_ADCLRCK <= '0';
+	wait for 22.68 us;
+	for i2 in 1 to 20 loop
+	AUD_ADCLRCK <= '1';
+	wait for 22.68 us;
+	AUD_ADCLRCK <= '0';
+	wait for 204.12 us;
+	end loop;
+wait;
+end process ADCLRCK;
+
+AudioIn :process
+variable i3 :integer;
+begin
+	for i3 in 1 to 2000 loop
+	AUD_ADCDAT <='1';
+	wait for 22.68 us;
+	AUD_ADCDAT <='0';
+	wait for 22.68 us;
+	end loop;
+wait;
+end process AudioIn;
+
 END s2p_adaptor_arch;
+

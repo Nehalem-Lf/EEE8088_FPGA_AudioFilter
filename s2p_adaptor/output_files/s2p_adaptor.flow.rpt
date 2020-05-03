@@ -1,5 +1,5 @@
 Flow report for s2p_adaptor
-Thu Apr 30 13:43:18 2020
+Sun May 03 22:33:08 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -37,29 +37,24 @@ refer to the applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------+
-; Flow Summary                                                                  ;
-+---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Apr 30 13:43:18 2020       ;
-; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                   ; s2p_adaptor                                 ;
-; Top-level Entity Name           ; s2p_adaptor                                 ;
-; Family                          ; Cyclone V                                   ;
-; Device                          ; 5CSEMA5F31C6                                ;
-; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 34 / 32,070 ( < 1 % )                       ;
-; Total registers                 ; 46                                          ;
-; Total pins                      ; 43 / 457 ( 9 % )                            ;
-; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
-; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
-; Total HSSI RX PCSs              ; 0                                           ;
-; Total HSSI PMA RX Deserializers ; 0                                           ;
-; Total HSSI TX PCSs              ; 0                                           ;
-; Total HSSI PMA TX Serializers   ; 0                                           ;
-; Total PLLs                      ; 0 / 6 ( 0 % )                               ;
-; Total DLLs                      ; 0 / 4 ( 0 % )                               ;
-+---------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------+
+; Flow Summary                                                              ;
++-----------------------------+---------------------------------------------+
+; Flow Status                 ; Successful - Sun May 03 22:33:08 2020       ;
+; Quartus Prime Version       ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name               ; s2p_adaptor                                 ;
+; Top-level Entity Name       ; s2p_adaptor                                 ;
+; Family                      ; Cyclone V                                   ;
+; Device                      ; 5CSEMA5F31C6                                ;
+; Timing Models               ; Final                                       ;
+; Logic utilization (in ALMs) ; N/A until Partition Merge                   ;
+; Total registers             ; N/A until Partition Merge                   ;
+; Total pins                  ; N/A until Partition Merge                   ;
+; Total virtual pins          ; N/A until Partition Merge                   ;
+; Total block memory bits     ; N/A until Partition Merge                   ;
+; Total PLLs                  ; N/A until Partition Merge                   ;
+; Total DLLs                  ; N/A until Partition Merge                   ;
++-----------------------------+---------------------------------------------+
 
 
 +-----------------------------------------+
@@ -67,7 +62,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/30/2020 13:39:42 ;
+; Start date & time ; 05/03/2020 22:32:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; s2p_adaptor         ;
 +-------------------+---------------------+
@@ -78,7 +73,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 1098445314875.158825038200932          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 1098445314875.158854157111992          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -91,44 +86,29 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                        ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4876 MB             ; 00:00:34                           ;
-; Fitter               ; 00:00:57     ; 1.0                     ; 6283 MB             ; 00:01:27                           ;
-; Assembler            ; 00:00:11     ; 1.0                     ; 4850 MB             ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:07     ; 1.0                     ; 5130 MB             ; 00:00:07                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4759 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4728 MB             ; 00:00:02                           ;
-; Total                ; 00:01:45     ; --                      ; --                  ; 00:02:21                           ;
-+----------------------+--------------+-------------------------+---------------------+------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                          ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name            ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Elaboration ; 00:00:17     ; 1.0                     ; 4867 MB             ; 00:00:37                           ;
+; Total                  ; 00:00:17     ; --                      ; --                  ; 00:00:37                           ;
++------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-NOAEJQH  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-NOAEJQH  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-NOAEJQH  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-NOAEJQH  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-NOAEJQH  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-NOAEJQH  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                      ;
++------------------------+------------------+------------+------------+----------------+
+; Module Name            ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++------------------------+------------------+------------+------------+----------------+
+; Analysis & Elaboration ; DESKTOP-NOAEJQH  ; Windows 10 ; 10.0       ; x86_64         ;
++------------------------+------------------+------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
-quartus_map --read_settings_files=on --write_settings_files=off s2p_adaptor -c s2p_adaptor
-quartus_fit --read_settings_files=off --write_settings_files=off s2p_adaptor -c s2p_adaptor
-quartus_asm --read_settings_files=off --write_settings_files=off s2p_adaptor -c s2p_adaptor
-quartus_sta s2p_adaptor -c s2p_adaptor
-quartus_eda --read_settings_files=off --write_settings_files=off s2p_adaptor -c s2p_adaptor
-quartus_eda --read_settings_files=on --write_settings_files=off s2p_adaptor -c s2p_adaptor --gen_testbench
+quartus_map --read_settings_files=on --write_settings_files=off s2p_adaptor -c s2p_adaptor --analysis_and_elaboration
 
 
 
