@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {D:/EEE8088/s2p_adaptor/s2p_adaptor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:11:19 on May 03,2020
+# Start time: 18:12:24 on May 04,2020
 # vcom -reportprogress 300 -93 -work work D:/EEE8088/s2p_adaptor/s2p_adaptor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,24 +20,24 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity s2p_adaptor
 # -- Compiling architecture rtl of s2p_adaptor
-# End time: 23:11:19 on May 03,2020, Elapsed time: 0:00:00
+# End time: 18:12:24 on May 04,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:11:19 on May 03,2020
+# Start time: 18:12:24 on May 04,2020
 # vcom -reportprogress 300 -93 -work work D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity s2p_adaptor_vhd_tst
 # -- Compiling architecture s2p_adaptor_arch of s2p_adaptor_vhd_tst
-# End time: 23:11:19 on May 03,2020, Elapsed time: 0:00:00
+# End time: 18:12:24 on May 04,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  s2p_adaptor_vhd_tst
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" s2p_adaptor_vhd_tst 
-# Start time: 23:11:19 on May 03,2020
+# Start time: 18:12:24 on May 04,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -53,5 +53,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 00:42:54 on May 04,2020, Elapsed time: 1:31:35
+# End time: 18:23:35 on May 04,2020, Elapsed time: 0:11:11
 # Errors: 0, Warnings: 1

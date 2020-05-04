@@ -59,7 +59,7 @@ clock : PROCESS
 -- variable declarations                                                                                           
 variable i : integer;-- variable declarations                                     
 BEGIN                                                        
-   for i in 1 to 500000 loop -- specify here the length of the simulation run
+   for i in 1 to 5000000 loop -- specify here the length of the simulation run
      CLOCK_50 <= '0';
      wait for 10 ns;
      CLOCK_50 <= '1';
@@ -71,13 +71,16 @@ END PROCESS clock;         -- code that executes only once
 rst :process
 begin
 	RST_N <= '1';
-	ADCrdy <= '1';
+--	ADCrdy <= '1';
+--	DACrdy <= '1';
 wait;
 end process rst;
 
 BCLK :process
 variable i1 :integer;
 begin
+	AUD_BCLK <='0';
+	wait for 11.34 us;
 	for i1 in 1 to 2000 loop
 	AUD_BCLK <='1';
 	wait for 11.34 us;
@@ -91,12 +94,15 @@ ADCLRCK :process
 variable i2 :integer;
 begin
 	AUD_ADCLRCK <= '0';
+	AUD_DACLRCK <= '0';
 	wait for 22.68 us;
-	for i2 in 1 to 20 loop
+	for i2 in 1 to 200 loop
 	AUD_ADCLRCK <= '1';
+	AUD_DACLRCK <= '1';
 	wait for 22.68 us;
 	AUD_ADCLRCK <= '0';
-	wait for 204.12 us;
+	AUD_DACLRCK <= '0';
+	wait for 385.56 us;
 	end loop;
 wait;
 end process ADCLRCK;
@@ -112,6 +118,9 @@ begin
 	end loop;
 wait;
 end process AudioIn;
+
+DACDAT <= ADCDAT;
+DACstb <= ADCstb;
 
 END s2p_adaptor_arch;
 
