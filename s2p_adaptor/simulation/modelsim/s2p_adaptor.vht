@@ -1,5 +1,7 @@
 LIBRARY ieee;                                               
-USE ieee.std_logic_1164.all;                                
+USE ieee.std_logic_1164.all;   
+use ieee.numeric_std.all;
+use ieee.math_real.all;                             
 
 ENTITY s2p_adaptor_vhd_tst IS
 END s2p_adaptor_vhd_tst;
@@ -107,17 +109,34 @@ begin
 wait;
 end process ADCLRCK;
 
-AudioIn :process
-variable i3 :integer;
-begin
-	for i3 in 1 to 2000 loop
-	AUD_ADCDAT <='1';
-	wait for 22.68 us;
-	AUD_ADCDAT <='0';
-	wait for 22.68 us;
-	end loop;
-wait;
-end process AudioIn;
+--AudioIn :process
+--variable i3 :integer;
+--begin
+--	for i3 in 1 to 2000 loop
+--	AUD_ADCDAT <='1';
+--	wait for 22.68 us;
+--	AUD_ADCDAT <='0';
+--	wait for 22.68 us;
+--	end loop;
+--wait;
+--end process AudioIn;
+
+signal_samples_proc: 
+PROCESS
+        VARIABLE v_sin : real; -- genereated sine value
+        VARIABLE i : integer; -- sample number
+        CONSTANT Ts : real := 1.0/44100; -- sampling period
+        CONSTANT f : real := 1000.0; -- frequency of the sine wave
+        CONSTANT A : integer := 32000; -- amplitude
+        CONSTANT Ns : integer := 200; -- number of samples to simulate
+BEGIN
+        FOR i IN 0 TO Ns LOOP
+                v_sin := sin(2 * math_2_pi * f * Ts * i);
+                AUD_ADCDAT := to_signed(integer(v_sin), 16);
+                WAIT FOR Ts*64.0;
+        END LOOP;
+        WAIT;
+END PROCESS;
 
 DACDAT <= ADCDAT;
 DACstb <= ADCstb;

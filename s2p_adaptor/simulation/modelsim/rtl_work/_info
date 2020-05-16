@@ -22,9 +22,9 @@ VD[@5oPLO0HfbZJeQ2j8?<0
 !s100 _90o:C_4k7BZTM[biC<?z2
 Z7 OV;C;10.5b;63
 31
-Z8 !s110 1588612344
+Z8 !s110 1588869730
 !i10b 1
-Z9 !s108 1588612344.000000
+Z9 !s108 1588869730.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|D:/EEE8088/s2p_adaptor/s2p_adaptor.vhd|
 Z11 !s107 D:/EEE8088/s2p_adaptor/s2p_adaptor.vhd|
 !i113 1
@@ -50,41 +50,25 @@ R11
 R12
 R13
 Es2p_adaptor_vhd_tst
-Z14 w1588612327
+w1588869697
+DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+R2
 R3
 R4
 R0
-Z15 8D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht
-Z16 FD:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht
+8D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht
+FD:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht
 l0
-L4
-VJoVG:T=_Ti^j6FS@SMXG=0
-!s100 Fl?=8;W>53o[2:M9lT=HZ0
-R7
-31
-R8
-!i10b 1
-R9
-Z17 !s90 -reportprogress|300|-93|-work|work|D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht|
-Z18 !s107 D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht|
-!i113 1
-R12
-R13
-As2p_adaptor_arch
-R3
-R4
-DEx4 work 19 s2p_adaptor_vhd_tst 0 22 JoVG:T=_Ti^j6FS@SMXG=0
-l39
 L6
-VPe0VW@eZiQMT6<7igM4fa1
-!s100 ^AKV7WNeHN=X1?l:LYTJb1
+V9<E<<JDz9;iYn@^0i?B_b1
+!s100 4L<JNQESN[?lI3VM85W5>2
 R7
 31
 R8
 !i10b 1
 R9
-R17
-R18
+!s90 -reportprogress|300|-93|-work|work|D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht|
+!s107 D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht|
 !i113 1
 R12
 R13

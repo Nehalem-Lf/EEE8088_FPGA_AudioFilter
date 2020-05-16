@@ -12,7 +12,7 @@
 # 
 # vcom -93 -work work {D:/EEE8088/s2p_adaptor/s2p_adaptor.vhd}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:12:24 on May 04,2020
+# Start time: 17:42:10 on May 07,2020
 # vcom -reportprogress 300 -93 -work work D:/EEE8088/s2p_adaptor/s2p_adaptor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -20,38 +20,35 @@
 # -- Loading package NUMERIC_STD
 # -- Compiling entity s2p_adaptor
 # -- Compiling architecture rtl of s2p_adaptor
-# End time: 18:12:24 on May 04,2020, Elapsed time: 0:00:00
+# End time: 17:42:10 on May 07,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht}
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:12:24 on May 04,2020
+# Start time: 17:42:10 on May 07,2020
 # vcom -reportprogress 300 -93 -work work D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package MATH_REAL
 # -- Compiling entity s2p_adaptor_vhd_tst
 # -- Compiling architecture s2p_adaptor_arch of s2p_adaptor_vhd_tst
-# End time: 18:12:24 on May 04,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs="+acc"  s2p_adaptor_vhd_tst
-# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cyclonev -L rtl_work -L work -voptargs=""+acc"" s2p_adaptor_vhd_tst 
-# Start time: 18:12:24 on May 04,2020
-# Loading std.standard
-# Loading std.textio(body)
-# Loading ieee.std_logic_1164(body)
-# Loading work.s2p_adaptor_vhd_tst(s2p_adaptor_arch)
-# Loading ieee.numeric_std(body)
-# Loading work.s2p_adaptor(rtl)
-# ** Warning: (vsim-8683) Uninitialized out port /s2p_adaptor_vhd_tst/i1/DACrdy has no driver.
-# This port will contribute value (U) to the signal network.
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run -all
-# End time: 18:23:35 on May 04,2020, Elapsed time: 0:11:11
-# Errors: 0, Warnings: 1
+# ** Error: D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht(134): (vcom-1581) No feasible entries for infix operator '*'.
+# ** Error: D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht(134): ** Error: (vcom-1590) Bad expression in left operand of infix expression '*'.
+# ** Error: D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht(134): ** Error: (vcom-1590) Bad expression in left operand of infix expression '*'.
+# ** Error: D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht(134): ** Error: (vcom-1590) Bad expression in left operand of infix expression '*'.
+# ** Error: D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht(134): (vcom-1600) No feasible entries for subprogram "SIN".
+#    Visible subprograms are:
+#       (explicit) MATH_REAL.SIN[std.STANDARD.REAL return std.STANDARD.REAL] at $MODEL_TECH/../vhdl_src/ieee/1076-2code.vhd(415)
+# ** Error: D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht(135): Signal "AUD_ADCDAT" cannot be target of variable assignment statement.
+# ** Error: D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht(135): Target type ieee.std_logic_1164.STD_LOGIC in variable assignment is different from expression type ieee.NUMERIC_STD.UNRESOLVED_SIGNED.
+# ** Error: D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht(136): Type error resolving infix expression "*" as type std.STANDARD.TIME.
+# ** Error: D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht(144): VHDL Compiler exiting
+# End time: 17:42:10 on May 07,2020, Elapsed time: 0:00:00
+# Errors: 9, Warnings: 0
+# ** Error: D:/ProgramFile/Quartus/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./s2p_adaptor_run_msim_rtl_vhdl.do line 10
+# D:/ProgramFile/Quartus/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {D:/EEE8088/s2p_adaptor/simulation/modelsim/s2p_adaptor.vht}"
