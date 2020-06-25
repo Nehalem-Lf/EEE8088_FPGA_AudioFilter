@@ -26,8 +26,8 @@ end entity;
 architecture rtl of s2p_adaptor is
 --	Internal Signals
 --input s2p
-signal cnt1: integer range 15 downto -1 ;
-signal cnt2: integer range 15 downto -1 ;
+signal counter1: integer range 15 downto -1 ;
+signal counter2: integer range 15 downto -1 ;
 signal old_BCLK :std_logic;
 signal old_AUD_DACLRCK:std_logic;
 signal shr:std_logic_vector(15 downto 0);
@@ -44,8 +44,8 @@ begin
 		-- reset actions (synchronous)
 		if (RST_N = '0') then
 				old_BCLK<='0';
-				cnt1<=15;
-				cnt2<=15;
+				counter1<=15;
+				counter2<=15;
 				ADCstb2<='0';
 			else
 				old_BCLK <= AUD_BCLK; -- needed for change detection on BCLK input
@@ -58,13 +58,13 @@ begin
 		  if (old_BCLK='0' and AUD_BCLK='1') then --rising edge of AUD_BCLK
 			  
 				if (AUD_ADCLRCK='1') then -- condition for the start of the protocol
-						cnt1<=14; -- load the bit counter
+						counter1<=14; -- load the bit counter
 						ADCDAT(15)<=AUD_ADCDAT; -- read the first bit of the packet
 						
-				elsif (cnt1>=0) then -- condition for the data bits of the left channel
-						ADCDAT(cnt1)<=AUD_ADCDAT; 	-- input one bit
-					   cnt1<=cnt1-1;	-- advance the bit counter
-			if (cnt1=0) then	-- condition for the strobe of ADC parallel interface
+				elsif (counter1>=0) then -- condition for the data bits of the left channel
+						ADCDAT(counter1)<=AUD_ADCDAT; 	-- input one bit
+					   counter1<=counter1-1;	-- advance the bit counter
+			if (counter1=0) then	-- condition for the strobe of ADC parallel interface
 				ADCstb2<='1';
 				end if;
 			end if;
@@ -81,19 +81,18 @@ begin
 		
 		-- Start of a new sample: reset counters, send out first bit      
 	if (old_AUD_DACLRCK = '0' and AUD_DACLRCK = '1' ) then	                                     
-	cnt2<=14;                                    
+	counter2<=14;                                    
     AUD_DACDAT <= shr(15);                         
 	-- Other left channel serial data bits: Send bits and Update count 
-	elsif (old_BCLK='1' and AUD_BCLK='0' and cnt2 >= 0) then	       
-	cnt2<=cnt2-1;            
-	AUD_DACDAT <= shr(cnt2);                              
+	elsif (old_BCLK='1' and AUD_BCLK='0' and counter2 >= 0) then	       
+	counter2<=counter2-1;            
+	AUD_DACDAT <= shr(counter2);                              
 	-- Keep output low when not sending data - cleaner on signal tap.   
-	elsif (old_BCLK='1' and AUD_BCLK='0' and cnt2 <0) then	                                     
+	elsif (old_BCLK='1' and AUD_BCLK='0' and counter2 <0) then	                                     
 	AUD_DACDAT <= '0'; 
     shr <= DACDAT;  	
 	end if;                              
---	-- Load parallel register when filter ready & not sending previous   
---	if (DACstb = '1' and cnt2 = 0) then	                              
+--	if (DACstb = '1' and counter2 = 0) then	                              
 --shr <= DACDAT;                              
 --	end if;              
 	
@@ -101,15 +100,15 @@ begin
 --		-- output channel
 --		 	   if(AUD_DACLRCK<='1') then -- start condition
 --				
---            cnt2<=14; 						
+--            counter2<=14; 						
 --			  AUD_DACDAT <=shr(15);	-- the MSB will be o/p first
 --     
 --				 elsif (old_BCLK='1' and AUD_BCLK='0') then -- each following falling edge
---					AUD_DACDAT<=shr(cnt2); -- produce DAC serial data bit
---				 	cnt2<=cnt2-1;
+--					AUD_DACDAT<=shr(counter2); -- produce DAC serial data bit
+--				 	counter2<=counter2-1;
 --				end if;
 --				
---				if (cnt2=0) then -- condition for loading DAC parallel register
+--				if (counter2=0) then -- condition for loading DAC parallel register
 --					DACrdy2<='1';-- ready to receive the data from FIR filter
 --				end if;
 --		if(DACrdy2='1') then
